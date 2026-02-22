@@ -11,28 +11,32 @@
 			type: 'web tool',
 			description: 'browser-based synthesizer with a retro pixel interface',
 			price: '$12',
-			canvas: 'synth' as const
+			canvas: 'synth' as const,
+			gumroadUrl: 'https://midilover.gumroad.com/l/pixel-synth'
 		},
 		{
 			name: 'midi mapper',
 			type: 'download',
 			description: 'map any midi controller to any parameter — drag, drop, done',
 			price: '$8',
-			canvas: 'mapper' as const
+			canvas: 'mapper' as const,
+			gumroadUrl: 'https://midilover.gumroad.com/l/midi-mapper'
 		},
 		{
 			name: 'beat grid',
 			type: 'web tool',
 			description: 'step sequencer that thinks in pixels — 16 steps, infinite layers',
 			price: '$15',
-			canvas: 'grid' as const
+			canvas: 'grid' as const,
+			gumroadUrl: 'https://midilover.gumroad.com/l/beat-grid'
 		},
 		{
 			name: 'chord lab',
 			type: 'download',
 			description: 'explore chord voicings with visual feedback and midi output',
 			price: '$10',
-			canvas: 'chord' as const
+			canvas: 'chord' as const,
+			gumroadUrl: 'https://midilover.gumroad.com/l/chord-lab'
 		}
 	];
 
@@ -40,7 +44,7 @@
 </script>
 
 <svelte:head>
-	<title>midi-lover — virtual instruments for pixel people</title>
+	<title>midi lover — virtual instruments for pixel people</title>
 	<meta name="description" content="Lo-fi MIDI tools and virtual instruments. Downloads and browser-based tools for music makers." />
 </svelte:head>
 
@@ -84,7 +88,7 @@
 							</div>
 							<h3 class="product-name">{product.name}</h3>
 							<p class="product-desc">{product.description}</p>
-							<PixelButton variant="secondary" href="/shop">view</PixelButton>
+							<PixelButton variant="secondary" href={product.gumroadUrl} target="_blank" rel="noopener">get it</PixelButton>
 						</div>
 					</PixelBorder>
 				</div>

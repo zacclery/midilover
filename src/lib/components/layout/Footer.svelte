@@ -7,7 +7,7 @@
 		<div class="footer-brand">
 			<div class="brand-row">
 				<FooterHeartCanvas />
-				<span class="brand">midi-lover</span>
+				<span class="brand">midi lover</span>
 				<FooterHeartCanvas />
 			</div>
 			<span class="tagline">virtual instruments for pixel people</span>
@@ -20,7 +20,7 @@
 		</nav>
 
 		<div class="footer-copy">
-			<span class="label">&copy; {new Date().getFullYear()} midi-lover</span>
+			<span class="label">&copy; {new Date().getFullYear()} midi lover</span>
 		</div>
 	</div>
 </footer>

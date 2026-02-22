@@ -44,8 +44,8 @@
 		ctx.fillStyle = PALETTE.fg;
 		ctx.fillRect(110, 150, 100, 1); // underline
 
-		// "midi-lover" pixel text
-		drawPixelText(ctx, 'midi-lover', 112, 158, PALETTE.accent);
+		// "midi lover" pixel text
+		drawPixelText(ctx, 'midi lover', 112, 158, PALETTE.accent);
 	}
 </script>
 

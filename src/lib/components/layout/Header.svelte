@@ -7,13 +7,12 @@
 	<div class="header-inner container">
 		<a href="/" class="logo">
 			<HeartLogoCanvas />
-			<span class="logo-text">midi-lover</span>
+			<span class="logo-text">midi lover</span>
 		</a>
 
 		<nav class="nav">
 			<a href="/shop" class:active={page.url.pathname.startsWith('/shop')}>shop</a>
 			<a href="/tools" class:active={page.url.pathname.startsWith('/tools')}>tools</a>
-			<a href="/dashboard" class:active={page.url.pathname.startsWith('/dashboard')}>account</a>
 		</nav>
 	</div>
 </header>
