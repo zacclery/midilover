@@ -8,6 +8,7 @@ import { eq } from 'drizzle-orm';
 import bcrypt from 'bcryptjs';
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
+	trustHost: true,
 	adapter: DrizzleAdapter(db),
 	providers: [
 		Google,
