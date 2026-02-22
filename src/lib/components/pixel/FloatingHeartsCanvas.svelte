@@ -1,14 +1,14 @@
 <script lang="ts">
 	import PixelCanvas from './PixelCanvas.svelte';
-	import { drawFloatingHearts } from '$lib/utils/pixel';
+	import { drawFloatingHearts, drawFloatingNotes } from '$lib/utils/pixel';
 
 	const WIDTH = 160;
 	const HEIGHT = 200;
-	const COUNT = 7;
 
 	function draw(ctx: CanvasRenderingContext2D, frame: number) {
 		ctx.globalAlpha = 0.3;
-		drawFloatingHearts(ctx, frame, WIDTH, HEIGHT, COUNT);
+		drawFloatingHearts(ctx, frame, WIDTH, HEIGHT, 7);
+		drawFloatingNotes(ctx, frame, WIDTH, HEIGHT, 4);
 		ctx.globalAlpha = 1;
 	}
 </script>
