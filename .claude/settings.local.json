@@ -24,7 +24,8 @@
       "Bash(source ~/.nvm/nvm.sh && nvm use 22 && pnpm --version 2>&1)",
       "Bash(docker run:*)",
       "Bash(curl:*)",
-      "Bash(pnpm run:*)"
+      "Bash(pnpm run:*)",
+      "Bash(chmod +x:*)"
     ]
   }
 }

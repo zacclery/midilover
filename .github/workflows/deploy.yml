@@ -1,0 +1,41 @@
+name: Deploy to Digital Ocean
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Digital Ocean
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/midilover
+
+            echo "Pulling latest changes..."
+            git pull origin main
+
+            echo "Rebuilding containers..."
+            docker compose build --no-cache
+
+            echo "Restarting services..."
+            docker compose up -d
+
+            echo "Waiting for services to start..."
+            sleep 10
+
+            echo "Checking deployment status..."
+            docker compose ps
+
+            echo "Deployment complete!"

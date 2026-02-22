@@ -5,4 +5,10 @@ build
 .idea
 .claude
 .git
+.github
+certbot
+nginx
+scripts
+backups
 *.md
+Makefile
