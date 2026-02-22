@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:teenage.engineering)",
+      "WebFetch(domain:www.elektron.se)",
+      "WebFetch(domain:fors.fm)",
+      "WebFetch(domain:nothing.tech)",
+      "WebSearch",
+      "Bash(which pnpm:*)",
+      "WebFetch(domain:svelte.dev)",
+      "WebFetch(domain:www.better-auth.com)",
+      "Bash(npx sv:*)",
+      "Bash(which node && node --version && which pnpm && pnpm --version 2>&1)",
+      "Bash(nvm ls:*)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 22 && npx sv create . --template minimal --types ts --no-add-ons --no-install 2>&1)",
+      "Bash(cp:*)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 22 && pnpm install 2>&1)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 22 && pnpm add @fontsource/jetbrains-mono 2>&1)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 22 && pnpm run check 2>&1)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 22 && pnpm run build 2>&1)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 22 && pnpm dev 2>&1)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 22 && pnpm add -D @sveltejs/adapter-node && pnpm remove @sveltejs/adapter-auto 2>&1)",
+      "Bash(docker build:*)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 22 && pnpm --version 2>&1)",
+      "Bash(docker run:*)",
+      "Bash(curl:*)",
+      "Bash(pnpm run:*)"
+    ]
+  }
+}
