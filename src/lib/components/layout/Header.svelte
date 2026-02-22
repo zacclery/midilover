@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import HeartLogoCanvas from '$lib/components/pixel/HeartLogoCanvas.svelte';
+
+	const session = $derived(page.data.session);
 </script>
 
 <header class="header">
@@ -13,7 +15,13 @@
 		<nav class="nav">
 			<a href="/shop" class:active={page.url.pathname.startsWith('/shop')}>shop</a>
 			<a href="/tools" class:active={page.url.pathname.startsWith('/tools')}>tools</a>
-			<a href="/dashboard" class:active={page.url.pathname.startsWith('/dashboard')}>account</a>
+			{#if session?.user}
+				<a href="/dashboard" class:active={page.url.pathname.startsWith('/dashboard')}>
+					{session.user.name || 'account'}
+				</a>
+			{:else}
+				<a href="/auth/login" class:active={page.url.pathname.startsWith('/auth')}>sign in</a>
+			{/if}
 		</nav>
 	</div>
 </header>

@@ -1,4 +1,4 @@
-.PHONY: help maintenance-on maintenance-off restart-all logs
+.PHONY: help maintenance-on maintenance-off restart-all logs db-push db-studio
 
 help:
 	@echo "Server:"
@@ -6,6 +6,10 @@ help:
 	@echo "  make maintenance-off   - Disable maintenance mode"
 	@echo "  make restart-all       - Restart all Docker services"
 	@echo "  make logs              - Tail app logs"
+	@echo ""
+	@echo "Database:"
+	@echo "  make db-push           - Push schema to database"
+	@echo "  make db-studio         - Open Drizzle Studio"
 
 maintenance-on:
 	@echo "=== Enabling Maintenance Mode ==="
@@ -25,3 +29,9 @@ restart-all:
 
 logs:
 	@docker compose logs -f app
+
+db-push:
+	docker compose exec app npx drizzle-kit push
+
+db-studio:
+	docker compose exec app npx drizzle-kit studio
